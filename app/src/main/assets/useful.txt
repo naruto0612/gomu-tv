@@ -1,0 +1,39 @@
+NAS
+//                    try{
+//                        String user = "admin";
+//                        String pass ="password";
+//                        String sharedFolder = "USB_Storage";
+//
+//                        String url = "smb://192.168.0.12/" + sharedFolder + "/shared/MovieRulzMovies/movies.txt";
+//                        NtlmPasswordAuthentication auth = new NtlmPasswordAuthentication(
+//                                null, user, pass);
+//
+//                        SmbFile sfile = new SmbFile(url, auth);
+//                        SmbFileInputStream smbfis = new SmbFileInputStream(sfile);
+//
+//                        StringBuilder contentBuilder = new StringBuilder();
+//
+//                        try (BufferedReader reader = new BufferedReader(new InputStreamReader(new SmbFileInputStream(sfile)))) {
+//                            String line = reader.readLine();
+//                            while (line != null) {
+//                                line = reader.readLine();
+//                                contentBuilder.append(line);
+//                            }
+//                            String content = contentBuilder.toString();
+//                            if (content.contains(movie.getVideoUrl())){
+//
+//                                int start = content.indexOf(movie.getVideoUrl());
+//                                int start1= content.indexOf("*** ", start) + 4;
+//                                movie.setVideoUrl(content.substring(start1, content.indexOf("}", start1)));
+//                                System.out.println(movie.getVideoUrl());
+//                            }
+//
+//                        } catch (Exception io){
+//                            System.out.println("reading error");
+//
+//                        }
+//
+//                    }catch(Exception io){
+//                        System.out.println("connection error");
+//
+//                    }
